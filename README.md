@@ -29,4 +29,4 @@ The modal to define a new task containing a title, description and deadline date
 
 ## Review
 
-The URL of the deployed application: 
+The URL of the deployed application: https://akravt1274.github.io/Challenge-Task-Board/
