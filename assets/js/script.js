@@ -7,7 +7,7 @@ function generateTaskId() {
 
 // Function to handle adding a new task to local storage and displaying tasks data
 function handleAddTask(event) {
-    event.preventDefault();
+    event.preventDefault();    
     
     // Read user input from the modal and store it into 'newTask' object 
     const taskTitle = $('#task-title').val().trim(); // trim extra spaces
@@ -34,16 +34,12 @@ function handleAddTask(event) {
         saveTasksToStorage(tasks);
 
         // Display all tasks from the local storage on the screen
-        displayTasks();
-
-        // Clear the modal inputs
-        $('#task-title').val('');
-        $('#task-due-date').val('');
-        $('#task-description').val('');   
+        displayTasks();         
 
         // Close the modal after adding a task
         $('#taskModal').modal('hide');
-    }     
+    }      
+
 }
 
 // Retrieve tasks from the localStorage, store in an array and returns array of project objects
@@ -185,6 +181,17 @@ function renderTaskList() {
 
 // When the index.html page loads:
 $(document).ready(function () {
+
+    // Clear the modal inputs when hidden
+    $('#taskModal').on('hidden.bs.modal', function() {
+        
+        $('#task-title').val('');
+        $('#task-due-date').val('');
+        $('#task-description').val('');
+        //clear error message
+        $('#error').text('');
+    });
+
     // Display tasks cards on the board (loaded from the localStorage)
     displayTasks();
 
