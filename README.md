@@ -23,11 +23,9 @@ The modal to define a new task containing a title, description and deadline date
 - Error message is displayed when saving an empty task.
 - Upon saving a task, the properties for that task are saved in localStorage.
 
-  ![alt text](assets/screenshots/image.png)
-
-  ![alt text](assets/screenshots/image-1.png)
-
-
+  ![alt text](assets/screenshots/image-7.png)
+  ![alt text](assets/screenshots/image-6.png)  
+  ![alt text](assets/screenshots/image-5.png)
 
 ## Review
 
